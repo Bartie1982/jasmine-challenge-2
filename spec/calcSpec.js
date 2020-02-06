@@ -1,31 +1,33 @@
   
-describe("Fizz Buzz", function() {
-
+describe("FizzBuzz function", function() {
+    
     beforeEach(function() {
-        fizzBuzz = new fizzBuzz();
-    }); 
-         
-    describe("Checks divisibility return a number ", function() {
-            it("should exist", function() {
-             expect(fizzBuzz).toBeDefined();
-        });    
-            it("Return Fizz divisible  by 3", function() {
-            var result = fizzBuzz(9)
+        fizzbuzz = new fizzBuzz();
+    });
+    
+    describe("Returns number, fizz, buzz, fizzbuzz", function() {
+       
+        it("should exist", function() {
+            expect(fizzBuzz).toBeDefined();
+        });
+        
+        it("return Fizz (6)", function() {
+            var result = fizzBuzz(6)
             expect(result).toBe("Fizz");
         });
-            it("Return Buzz divisible  by 5", function() {
+                
+        it("return Buzz (10)", function() {
             var result = fizzBuzz(10)
             expect(result).toBe("Buzz");
-        }); 
-          it("Return Fizz Buzz if divisible by 5 and 3", function() {
+        });
+        
+        it("return FizzBuzz(15)", function() {
             var result = fizzBuzz(15)
-            expect(result).toBe("Fizz Buzz");
+            expect(result).toBe("FizzBuzz");
         });
-            it("Return Fizz divisible  by 2", function() {
-            var result = fizzBuzz()
-            expect(result).toBe("2");
-    
+        it("should return 2 when called as fizzBuzz(2)", function() {
+            var result = fizzBuzz(2)
+            expect(result).toBe(2);
         });
-         
     });
 });
